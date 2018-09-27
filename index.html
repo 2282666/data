@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth >375) deviceWidth = 375;
+		document.documentElement.style.fontSize = deviceWidth / 3.75 + 'px';
+	</script>
+	<style type="text/css">
+		html,body,h1,h2,h3,p,ul {
+			padding: 0;
+			margin: 0;
+		}
+		* {
+			box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+		}
+		html,body {
+			height: 100%;
+		}
+		body {
+			font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
+			line-height: 1;
+			color: rgb(68,68,68);
+			background-color: #f4f4f4;
+		}
+		.wrap {
+			background-color: #f4f4f4;
+			min-height: 100%;
+		}
+		.line {
+			height: 1px;
+			background-color: #eee;
+		}
+		@media screen and (max-width:321px){
+		    .font15{font-size:15px}
+		}
+
+		@media screen and (min-width:321px) and (max-width:400px){
+		    .font15{font-size:16px}
+		}
+
+		@media screen and (min-width:400px){
+		    .font15{font-size:18px}
+		}
+		@media screen and (max-width:321px){
+		    .font12{font-size:12px}
+		}
+
+		@media screen and (min-width:321px) and (max-width:400px){
+		    .font12{font-size:13px}
+		}
+
+		@media screen and (min-width:400px){
+		    .font12{font-size:15px}
+		}
+		@media screen and (max-width:321px){
+		    .font13{font-size:13px}
+		}
+
+		@media screen and (min-width:321px) and (max-width:400px){
+		    .font13{font-size:14px}
+		}
+
+		@media screen and (min-width:400px){
+		    .font13{font-size:16px}
+		}
+		@media screen and (max-width:321px){
+		    .font14{font-size:14px}
+		}
+
+		@media screen and (min-width:321px) and (max-width:400px){
+		    .font14{font-size:15px}
+		}
+
+		@media screen and (min-width:400px){
+		    .font14{font-size:17px}
+		}
+		@media screen and (max-width:321px){
+		    .font18{font-size:18px}
+		}
+
+		@media screen and (min-width:321px) and (max-width:400px){
+		    .font18{font-size:19px}
+		}
+
+		@media screen and (min-width:400px){
+		    .font18{font-size:21px}
+		}
+		.tit1 {
+			text-align: center;
+			padding-top: 0.3rem;
+			padding-bottom: 0.2rem;
+			font-weight: normal;
+		}
+		.tips {
+			text-align: center;
+			margin-bottom: 0.16rem;
+		}
+		.box {
+			border-radius: 0.05rem;
+			margin: 0 0.15rem;
+			box-shadow: 0 0 0.15rem rgba(0,0,0,.2);
+			padding: 0.15rem;
+			background-color: #fff;
+		}
+		.tit2 {
+			text-align: center;
+			padding-top: 0.05rem;
+			margin-bottom: 0.1rem;
+		}
+		.con1 {
+			background-color: rgb(242,246,255);
+			padding: 0.15rem;
+			padding-top: 0.17rem;
+			border-radius: 0.03rem;
+			line-height: 1.4;
+			margin-bottom: 0.1rem;
+			color: #494949;
+		}
+		.con2 {
+			margin-top: 0.26rem;
+			margin-bottom: 0.25rem;
+			padding: 0.2rem 0.16rem 0.15rem 0.16rem;
+			border: 1px solid #fff599;
+			border-radius: 0.03rem;
+			line-height: 1.4;
+			position: relative;
+		}
+		.howtodo {
+			position: absolute;
+			text-align: center;
+			left: 0;
+			right: 0;
+			top: 0;
+      		-webkit-ransform: translateY(-50%);
+      		transform: translateY(-50%);
+		}
+		.howtodo>span {
+			display: inline-block;
+			padding: 0 0.18rem;
+			background-color: #fff;
+		}
+		.con2 p {
+			margin-bottom: 0.2rem;
+		}
+		.con2 p:last-child {
+			margin-bottom: 0;
+		}
+		.con2-text {
+			color: rgb(102,102,102);
+		}
+		.tit3{
+			margin-bottom: 0.13rem;
+			text-align: center;
+		}
+		.tit3 span {
+			position: relative;
+			padding: 0 0.16rem;
+			display: inline-block;
+		}
+		.tit3 span:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 0.04rem;
+			height: 0.04rem;
+			border-radius: 0.04rem;
+			background-color: rgb(68,68,68);
+			top: 50%;
+      		-webkit-ransform: translateY(-50%);
+      		transform: translateY(-50%);
+		}
+		.tit3 span:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			width: 0.04rem;
+			height: 0.04rem;
+			border-radius: 0.04rem;
+			background-color: rgb(68,68,68);
+			top: 50%;
+      		-webkit-ransform: translateY(-50%);
+      		transform: translateY(-50%);
+		}
+		.con3 {
+			padding: 0 0.42rem;
+			line-height: 1.4;
+		}
+		.list {
+			list-style: none;
+		}
+		.list>li {
+			display: block;
+		}
+		.list>li:after {
+			content: '';
+			display: block;
+			border-bottom: 1px dashed #eee;
+		}
+		.list>li:last-child:after {
+			content: '';
+			display: none;
+		}
+		.list>li:last-child .item{
+			padding-bottom: 0;
+		}
+		.item {
+			padding-top: 0.2rem;
+			padding-bottom: 0.15rem;
+		}
+		.fl {
+			float: left;
+		}
+		.fr {
+			float: right;
+		}
+		.list-img {
+			overflow: hidden;
+			width: 1.71rem;
+			height: 0.97rem;
+			box-shadow: 0 0 8px rgba(0,0,0,.1);
+			background-color: #f3f3f3;
+     		position: relative;
+    		z-index: 2;
+		}
+		.list-img img {
+			width: 100%;
+			vertical-align: top;
+		}
+		.list-l {
+			margin-right: 1.71rem;
+			min-height: 0.97rem;
+			padding-top: 0.1rem;
+		}
+		.list-l-item {
+			height: 0.82rem;
+			background-color: #f9f6f2;
+			padding-left: 0.15rem;
+			padding-top: 0.2rem;
+			position: relative;
+		}
+		.list-l-item h3 {
+			font-weight: normal;
+		}
+		.list-l-item p {
+			color: rgb(102,102,102);
+			position: absolute;
+			bottom: 0.1rem;
+			left: 0.15rem;
+			right: 0;
+		}
+		.tit4 {
+			margin-top: 0.16rem;
+			margin-bottom: 0.1rem;
+			color: rgb(204,171,134);
+			font-weight: normal;
+		}
+		.list-text {
+			color: rgb(102,102,102);
+			line-height: 1.4;
+		}
+		.bot {
+			padding: 0.32rem 0;
+			text-align: center;
+		}
+		.bot h3 {
+			margin-bottom: 0.12rem;
+			line-height: 1.4;
+			font-weight: normal;
+		}
+		.bot p {
+			margin-bottom: 0.3rem;
+			line-height: 1.4;
+			color: rgb(102,102,102);
+		}
+		.share-btn {
+			display: block;
+			text-decoration: none;
+			color: #fff;
+			background-color: #ccab86;
+			height: 0.36rem;
+			line-height: 0.36rem;
+			border-radius: 0.36rem;
+			text-align: center;
+			width: 1.5rem;
+			margin: 0 auto;
+		}
+		.share-btn:active,.share-btn:hover,.share-btn:focus {
+			color: #fff;
+		}
+		.list-num {
+			position: absolute;
+			top: 0;
+			left: 0.18rem;
+			color: #ccab86;
+			font-style: italic;
+     		font-family: sans-serif;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h3 class="tit1 font15">王英法</h3>
+		<p class="tips font13">啊啊啊啊啊啊啊</p>
+		<div class="box">
+			<h3 class="tit2 font18">啊啊啊啊</h3>
+			<div class="con1 font13">
+				啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+			</div>
+			<div class="line"></div>
+			<div class="con2 font12">
+				<div class="howtodo">
+					<span class="font18">怎么做</span>
+				</div>
+				<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+				<p class="con2-text">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+			</div>
+			<div class="tit3 font15">
+				<span>啊啊啊啊啊啊啊啊</span>
+			</div>
+			<div class="con3 font12">
+				啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+			</div>
+			<ul class="list">
+				<li>
+					<div class="item">
+						<div class="list-img fr">
+							<img src="">
+						</div>
+						<div class="list-l">
+							<div class="list-l-item">
+								<div class="list-num font18">01</div>
+								<h3 class="font14">啊啊啊</h3>
+								<p class="font12">导师：啊啊</p>
+							</div>
+						</div>
+						<h3 class="tit4 font15">// 课程亮点 //</h3>
+						<p class="list-text font12">啊啊啊啊啊啊啊啊啊</p>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="list-img fr">
+							<img src="">
+						</div>
+						<div class="list-l">
+							<div class="list-l-item">
+								<div class="list-num font18">02</div>
+								<h3 class="font14">啊啊啊</h3>
+								<p class="font12">导师：啊啊</p>
+							</div>
+						</div>
+						<h3 class="tit4 font15">// 课程亮点 //</h3>
+						<p class="list-text font12">啊啊啊啊啊啊啊啊啊</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="bot">
+			<h3 class="font15">啊啊啊啊啊</h3>
+			<p class="font13">啊啊啊啊啊啊啊啊啊啊啊啊</p>
+			<a href="#" class="share-btn font15">分享到朋友圈</a>
+		</div>
+	</div>
+</body>
+</html>
